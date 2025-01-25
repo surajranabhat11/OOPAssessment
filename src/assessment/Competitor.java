@@ -1,8 +1,9 @@
 package assessment;
 
 public class Competitor {
+	//Class to store competitors info
 	private int competitorId;
-	private Name name;
+	private Name name; //Name class to store name
 	private String competitionLevel;
 	private String country;
 	private int age;
@@ -15,6 +16,7 @@ public class Competitor {
 		this.age = age;
 	}
 	
+	//Getter and Setter 
 	public int getCompetitorId() {
 		return competitorId;
 	}
@@ -55,20 +57,24 @@ public class Competitor {
 		this.age = age;
 	}
 	
+	//Overall Score
 	public double getOverallScore() {
 		return 5.0;
 	}
 	
+	//Competitor's full details
 	public String getFullDetails() {
 		return String.format("Competitor number %d, Name: %s. %s is a %s aged %d from %s and has an overall score of %.1f.",competitorId,name.getFullName(), name.getFirstName(), competitionLevel, age, country, getOverallScore());
 	}
 	
+	//Competitor's short details
 	public String getShortDetails() {
 		return String.format("CN %d (%s) has overall score %.1f",competitorId, name.getInitials(), getOverallScore());
 	}
 }
 
 class Name{
+	//Name class to store full name
 	private String firstName;
 	private String middleName;
 	private String lastName;
